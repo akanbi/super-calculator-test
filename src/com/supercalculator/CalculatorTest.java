@@ -14,7 +14,7 @@ public class CalculatorTest extends UiAutomatorTestCase {
 		new UiObject(new UiSelector().className(EditText.class).instance(0)).setText("10");
 		new UiObject(new UiSelector().className(EditText.class).instance(1)).setText("5");
 		new UiObject(new UiSelector().text("Calcular")).click();
-		assertTrue("The result should be visible.", new UiObject(new UiSelector().text("O resultado de 10 + 5 é 15.")).waitForExists(2000));
+		assertTrue("The result should be visible.", new UiObject(new UiSelector().textContains("Resultado: 10 + 5 = 15")).waitForExists(5000));
 		UiDevice.getInstance().pressBack();
 	}
 	
