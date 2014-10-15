@@ -1,2 +1,2 @@
-call ant build-and-run -Dglobalfile=producao
+call ant build-and-run
 pause
